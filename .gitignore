@@ -3,6 +3,12 @@
 data/
 *.swp
 
+# ignore VIRL Stuff
+.metadata/
+My\ Topologies/
+Sample\ Topologies/
+AvailableSubtypes.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
