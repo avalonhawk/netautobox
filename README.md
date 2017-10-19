@@ -1,8 +1,15 @@
-# Network Automation Sandbox
+# Network Automation Lab
 
-Sandbox repo for playing around with network automation tools.
+Lab environment based on Ansible VM and vSRX + VIRL for basic multivendor lab. 
 
-* Lab: Network Automation Lab for [Building Network Automation Soluions](http://www.ipspace.net/Building_Network_Automation_Solutions) course
-* nms: First stab at running vagrant to setup ansible box
-* srx1: Just kicking tires of vSRX box
+The `Vagrant` file creates:
+* one **nms** virtual machine running Ubuntu 14.04 and loads necessary modules
+* one **srx** virtual machine running vSRX box for VMware Vagrant providers
+* Both VMs are connected to the *vmnet2* network - shared with VIRL. See below
+
+The `.virl` topology file creates a toplogy with the following attributes:
+* two IOSv routers
+* each router has a connection to the `flat` network
+* one direct link between routers
+
 
