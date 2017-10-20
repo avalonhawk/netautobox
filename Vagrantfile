@@ -12,12 +12,12 @@ Vagrant.configure(2) do |config|
     nms.vm.host_name = "nms"
     nms.vm.network "private_network", ip: "172.16.1.12"
     nms.vm.synced_folder "data/", "/vagrant_data"
-#  config.vm.provision "shell",inline: <<-SHELL
-#    apt-get update
-#    apt-get -qq install git
-#    git clone https://github.com/ipspace/NetOpsWorkshop
-#    sh -c "/home/vagrant/NetOpsWorkshop/install/install.sh
-#  SHELL
+  config.vm.provision "shell",inline: <<-SHELL
+    apt-get update
+    apt-get -qq install git
+    git clone https://github.com/ipspace/NetOpsWorkshop
+    sh -c "/home/vagrant/NetOpsWorkshop/install/install.sh"
+  SHELL
   end
 
   config.vm.define "srx" do |srx|
